@@ -149,4 +149,13 @@ public class VerleihServiceImplTest
                 Collections.singletonList(_medienListe.get(2)), _datum);
         assertFalse(ereignisse[0]);
     }
+    @Test
+    public void testeNachVormerkenNichtVormerkUndAusleihbar()
+    {
+        List<Medium> medien = new ArrayList<Medium>();
+        medien.add(new CD("titel", "kommentar", "interpret", 20));
+        _service.merkeVor(medien, _kunde);
+        assertFalse(_service.istVormerkenMoeglich(medien, _kunde));
+        assertFalse(_service.istVerleihenMoeglich(_kunde, medien));
+    }
 }
