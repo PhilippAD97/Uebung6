@@ -1,6 +1,6 @@
 # Uebung6
 
-Verbleibende Probleme:
+_Verbleibende Probleme:
 
 - Vormerkungen werden erst angezeigt, sobald 3 Personen vorgemerkt haben und das Medium verliehen ist
 - vermutlich als Folge davon werden nach dem Zurückgeben die Vormerker nicht mehr angezeigt
