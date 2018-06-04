@@ -26,7 +26,7 @@ public class Vormerkkarte {
 	 * Initialisiert eine neue Vormerkkarte mit den gegebenen Daten.
 	 * 
 	 * @param medium
-	 *            Ein verliehenes Medium.
+	 *            Ein Medium, zu dem die Vormerkkarte gehoert.
 	 * @param kunde
 	 *            der erste Vormerker .
 	 * @require medium != null
@@ -87,7 +87,7 @@ public class Vormerkkarte {
 	 */
 	public boolean istVormerkenMoeglich(Kunde kunde) {
 		assert kunde != null : "Vorbedingung verletzt: kunde != null";
-		return (_vormerker.size() < 3 && !istVorgemerktAn(kunde));
+		return (_vormerker.size() < maximalevormerker && !istVorgemerktAn(kunde));
 	}
 
 	/**
