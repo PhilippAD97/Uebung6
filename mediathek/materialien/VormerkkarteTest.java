@@ -51,16 +51,23 @@ public class VormerkkarteTest {
 	public void testfuegeKundenHinzu() {
 		Vormerkkarte karte1 = new Vormerkkarte(_medium, _kunde);
 		karte1.fuegeKundenHinzu(_kunde1);
-		assert (karte1.getAlleVormerker().contains(_kunde1));
+		assertEquals(karte1.getVormerker(2), _kunde1);
 	}
 
 	@Test
 	public void testistVormerkenMoeglich() {
 		Vormerkkarte karte1 = new Vormerkkarte(_medium, _kunde1);
 		assertTrue(karte1.istVormerkenMoeglich(_kunde));
+		assertFalse(karte1.istVormerkenMoeglich(_kunde1));
 		karte1.fuegeKundenHinzu(_kunde2);
 		karte1.fuegeKundenHinzu(_kunde3);
 		assertFalse(karte1.istVormerkenMoeglich(_kunde));
+	}
+	
+		@Test
+	public void testhatVorgemerkt() {
+		Vormerkkarte karte1 = new Vormerkkarte(_medium, _kunde1);
+		assertTrue(karte1.istVorgemerktAn(_kunde1);
 	}
 
 	@Test
