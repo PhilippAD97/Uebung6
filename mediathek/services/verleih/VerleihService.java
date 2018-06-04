@@ -333,6 +333,14 @@ public interface VerleihService extends ObservableService {
 	 * Gibt alle Vormerkkarten zurueck
 	 */
 	public List<Vormerkkarte> getVormerkkarten();
+	
+	/**
+	*Gibt den i-ten Vormerker eines Mediums zurück
+	*
+	* @param int stelle Stelle des zurückzugebenden Vormerkers
+	* @param Medium medium Medium, dessen i-ter Vormerker zurückgegeben werden soll
+	*/
+	public Kunde getVormerkerBei(int stelle, Medium medium);
 /**
  * Prüft, ob der übergebene Kunde in der Liste der ausgewählten Medien immer der erste Vormerker ist
  * 
